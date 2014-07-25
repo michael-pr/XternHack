@@ -10,7 +10,11 @@ Template.MasterLayout.events({
    *  }
    */
    'click #menu': function (e, tmpl) {
-    
+    if (Session.get("navflag") == true) {
+      Session.set("navflag", false);
+    } else {
+      Session.set("navflag", true);
+    }
    }
 });
 
@@ -21,6 +25,9 @@ Template.MasterLayout.helpers({
    *    return Items.find();
    *  }
    */
+   navflag: function () {
+    return Session.get("navflag") ? "menu-hidden" : ""; 
+   }
 });
 
 /*****************************************************************************/
