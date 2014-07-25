@@ -20,4 +20,5 @@ Router.map(function () {
   this.route('create.circle', {path: '/circles/create'});
   this.route('circles.map', {path: '/map'});
   this.route('post.details', {path: '/post/:id'});
+  this.route('profile', {path: '/profile'});
 });

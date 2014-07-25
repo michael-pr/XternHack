@@ -9,6 +9,9 @@ Template.MasterLayout.events({
    *
    *  }
    */
+   'click #menu': function (e, tmpl) {
+    
+   }
 });
 
 Template.MasterLayout.helpers({

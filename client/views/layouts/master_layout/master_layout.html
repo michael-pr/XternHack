@@ -1,3 +1,18 @@
 <template name="MasterLayout">
-  {{> yield}}
+	{{> loginButtons}}
+	{{#if currentUser}}
+	<div class="nav {{navflag}}">
+		<ul>
+			<li><a href="{{pathFor 'create.circle'}}">Create</a></li>
+			<li><a href="{{pathFor 'circles.index'}}">Circle</a></li>
+			<li><a href="{{pathFor 'circles.map'}}">Map</a></li>
+			<li><a href="{{pathFor 'profile'}}">Profile</a></li>
+		</ul>
+	</div>
+	{{else}}
+	<div class="container">
+
+	</div>
+	{{/if}}
+	{{> yield}}
 </template>
