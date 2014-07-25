@@ -14,5 +14,10 @@ Router.map(function () {
     Example:
       this.route('home', {path: '/'});
   */
-  this.route('circles.index', {path: '/'});
+  this.route('login', {path: '/'});
+  this.route('register', {path: '/register'})
+  this.route('circles.index', {path: '/circle/:id'});
+  this.route('create.circle', {path: '/circles/create'});
+  this.route('circles.map', {path: '/map'});
+  this.route('post.details', {path: '/post/:id'});
 });
