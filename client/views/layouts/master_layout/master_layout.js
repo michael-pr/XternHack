@@ -15,6 +15,13 @@ Template.MasterLayout.events({
     } else {
       Session.set("navflag", true);
     }
+   },
+   'click a': function (e, tmpl) {
+    if (Session.get("navflag") == true) {
+      Session.set("navflag", false);
+    } else {
+      Session.set("navflag", true);
+    }
    }
 });
 
