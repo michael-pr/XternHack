@@ -1,5 +1,6 @@
 CirclesIndexController = RouteController.extend({
   waitOn: function () {
+  	Meteor.subscribe('circles_index');
   },
 
   data: function () {

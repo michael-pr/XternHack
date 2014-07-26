@@ -9,6 +9,19 @@ Template.Register.events({
    *
    *  }
    */
+   "submit #login-form": function(event, template) {
+    event.preventDefault();
+    
+    Accounts.createUser({
+      email: template.find("[name='email-login']").value,
+      password: template.find("[name='password-login']").value
+    });
+
+    if (Meteor.user())
+      Router.go("circles.map");
+    else
+      Router.go("login");
+  }
 });
 
 Template.Register.helpers({

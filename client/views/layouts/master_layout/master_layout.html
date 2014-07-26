@@ -2,35 +2,35 @@
 	<nav>
 		{{#if currentUser}}
 			<div class="menu {{navflag}}">
-				<a href="#" class="pull-left">
+				<a href="#" class="pull-left menu-link">
 					<i class="fa fa-times fa-4x"></i>
 				</a>
-				<a href="{{pathFor 'create.circle'}}" class="pull-right">
+				<a href="{{pathFor 'create.circle'}}" class="pull-right menu-link">
 					<i class="fa fa-plus-circle fa-4x"></i>
 				</a>
 				<div class="clearfix"></div>
 				<div class="container">
 					<ul>
-						<li><a href="{{pathFor 'create.circle'}}">Create</a></li>
-						<li><a href="{{pathFor 'circles.index'}}">Circle</a></li>
-						<li><a href="{{pathFor 'circles.map'}}">Map</a></li>
-						<li><a href="{{pathFor 'profile'}}">Profile</a></li>
-						<li id="logout"><a href="/">Logout</a></li>
+						<li><a class="menu-link" href="{{pathFor 'create.circle'}}">Create</a></li>
+						<li><a class="menu-link" href="{{pathFor 'circles.index'}}">Circle</a></li>
+						<li><a class="menu-link" href="{{pathFor 'circles.map'}}">Map</a></li>
+						<li><a class="menu-link" href="{{pathFor 'profile'}}">Profile</a></li>
+						<li id="logout"><a class="menu-link" href="/">Logout</a></li>
 					</ul>
 				</div>
 			</div>
 
 		{{else}}
 			<div class="menu {{navflag}}">
-				<a href="#" class="pull-left">
+				<a href="#" class="pull-left menu-link">
 					<i class="fa fa-times fa-4x"></i>
 				</a>
 				<div class="clearfix"></div>
 				<div class="container">
 					<ul>
-						<li><a href="/">Home</a></li>
-						<li><a href="{{pathFor 'about'}}">About</a></li>
-						<li><a href="{{pathFor 'contact'}}">Contact</a></li>
+						<li><a class="menu-link" href="/">Home</a></li>
+						<li><a class="menu-link" href="{{pathFor 'about'}}">About</a></li>
+						<li><a class="menu-link" href="{{pathFor 'contact'}}">Contact</a></li>
 					</ul>
 				</div>
 			</div>
@@ -38,7 +38,9 @@
 	</nav>
 	<article>
 		<div id="menu">
-			<i class="fa fa-bars fa-4x"></i>
+			<div class="{{onavflag}}">
+				<i class="fa fa-bars fa-4x"></i>
+			</div>
 		</div>
 		<div id="content">
 			{{> yield}}

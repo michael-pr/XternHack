@@ -20,7 +20,7 @@ Template.MasterLayout.events({
     switchNavFlag();
     showHideNav();
    },
-   'click a': function (e, tmpl) {
+   'click .menu-link': function (e, tmpl) {
     switchNavFlag();
     showHideNav();
    },
@@ -37,7 +37,10 @@ Template.MasterLayout.helpers({
    *  }
    */
    navflag: function () {
-    return Session.get("navflag") ? "menu-hidden" : ""; 
+    return Session.get("navflag") ? "menu-hidden" : "";
+   },
+   onavflag: function() {
+    return Session.get("navflag") ? "" : "menu-hidden";
    }
 });
 

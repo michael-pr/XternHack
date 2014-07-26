@@ -21,7 +21,10 @@ Template.Login.events({
       }
     );
 
-    Router.go("circles.map");
+    if (Meteor.user())
+      Router.go("circles.map");
+    else
+      Router.go("login");
   }
 });
 
