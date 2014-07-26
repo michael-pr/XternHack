@@ -1,14 +1,13 @@
 <template name="CreateCircle">
-	{{#if currentUser}}
-	<form class="create-circle-form">
-		<input type="text" name="title" placeholder="title" />
-		<input type="text" name="description" placeholder="description (optional)" />
-		<input type="checkbox" name="private" value="private?">
-		<div class="{{isPrivate}}">
-			<input type="password" name="password" placeholder="password" />
-		</div>
-	</form>
-	{{else}}
-		<h1>You must be logged in lol.</h1>
-	{{/if}}
+	{{#autoForm collection="Circles" id="createCircleForm" type="insert"}}
+	<fieldset>
+		<legend>Create a Circle</legend>
+		{{> afQuickField name="title"}}
+		{{> afQuickField name="description"}}
+		{{> afQuickField name="radius"}}
+		{{> afQuickField name="anonymous" id="anonymous-checkbox"}}
+		{{> afQuickField name="password" id="password-field"}}
+	</fieldset>
+	<button type="submit" class="btn btn-primary">Create</button>
+	{{/autoForm}}
 </template>

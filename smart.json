@@ -3,6 +3,7 @@
     "iron-router": {},
     "bootstrap-3": {},
     "googlemaps": {},
-    "font-awesome": {}
+    "font-awesome": {},
+    "autoform": {}
   }
 }
