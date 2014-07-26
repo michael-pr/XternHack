@@ -1,21 +1,25 @@
 <template name="MasterLayout">
-	<div id="menu">
-		Menu
-	</div>
-	{{#if currentUser}}
-		<div class="menu {{navflag}}">
-			<ul>
-				<li><a href="{{pathFor 'create.circle'}}">Create</a></li>
-				<li><a href="{{pathFor 'circles.index'}}">Circle</a></li>
-				<li><a href="{{pathFor 'circles.map'}}">Map</a></li>
-				<li><a href="{{pathFor 'profile'}}">Profile</a></li>
-				<li>{{> loginButtons}}</li>
-			</ul>
+	<nav>
+		<div id="menu">
+			Menu
 		</div>
-	{{else}}
-		<div class="container">
-			{{>loginButtons}}
-		</div>
-	{{/if}}
-	{{> yield}}
+		{{#if currentUser}}
+			<div class="menu {{navflag}}">
+				<ul>
+					<li><a href="{{pathFor 'create.circle'}}">Create</a></li>
+					<li><a href="{{pathFor 'circles.index'}}">Circle</a></li>
+					<li><a href="{{pathFor 'circles.map'}}">Map</a></li>
+					<li><a href="{{pathFor 'profile'}}">Profile</a></li>
+					<li>{{> loginButtons}}</li>
+				</ul>
+			</div>
+		{{else}}
+			<div class="container">
+				{{>loginButtons}}
+			</div>
+		{{/if}}
+	</nav>
+	<article>
+		{{> yield}}
+	</article>
 </template>
