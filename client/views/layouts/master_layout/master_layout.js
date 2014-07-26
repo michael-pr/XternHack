@@ -2,6 +2,13 @@
 /*****************************************************************************/
 /* MasterLayout: Event Handlers and Helpersss .js*/
 /*****************************************************************************/
+function switchNavFlag(){
+  (Session.get("navflag") == true) ? Session.set("navflag", false) : Session.set("navflag", true);
+}
+function showHideNav(){
+  var viewportWidth = $(window).width() * 0.7;
+  $('article').animate({'left':(Session.get("navflag")) ? '0' : viewportWidth}, 150)
+}
 Template.MasterLayout.events({
   /*
    * Example:
@@ -10,18 +17,12 @@ Template.MasterLayout.events({
    *  }
    */
    'click #menu': function (e, tmpl) {
-    if (Session.get("navflag") == true) {
-      Session.set("navflag", false);
-    } else {
-      Session.set("navflag", true);
-    }
+    switchNavFlag();
+    showHideNav();
    },
    'click a': function (e, tmpl) {
-    if (Session.get("navflag") == true) {
-      Session.set("navflag", false);
-    } else {
-      Session.set("navflag", true);
-    }
+    switchNavFlag();
+    showHideNav();
    }
 });
 
@@ -44,6 +45,7 @@ Template.MasterLayout.created = function () {
 };
 
 Template.MasterLayout.rendered = function () {
+  switchNavFlag();
 };
 
 Template.MasterLayout.destroyed = function () {
