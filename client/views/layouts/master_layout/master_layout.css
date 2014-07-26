@@ -11,9 +11,15 @@
 	opacity: 0.6;
 	position: fixed;
 	z-index: 1;
+	padding: 10px;
+}
+.menu ul {
+	padding: 0;
+	margin: 0;
 }
 .menu li {
 	font-size: 4em;
+	list-style-type: none;
 }
 .menu a {
 	color: #fff;
@@ -21,16 +27,13 @@
 .menu-hidden {
 	display: none;
 }
-#menu {
-	padding: 0px 20px;
-}
 nav {
-	height: 10%;
+	/*height: 10%;*/
 }
 article {
 	left: 0;
 	position: absolute;
-	height: 80%;
+	height: 100%;
 	width: 100%;
 	background-color: white;
 	padding: 20px;
