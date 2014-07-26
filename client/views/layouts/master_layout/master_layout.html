@@ -9,18 +9,30 @@
 					<i class="fa fa-plus-circle fa-4x"></i>
 				</a>
 				<div class="clearfix"></div>
-				<ul>
-					<li><a href="{{pathFor 'create.circle'}}">Create</a></li>
-					<li><a href="{{pathFor 'circles.index'}}">Circle</a></li>
-					<li><a href="{{pathFor 'circles.map'}}">Map</a></li>
-					<li><a href="{{pathFor 'profile'}}">Profile</a></li>
-					<li id="logout"><a href="/">Logout</a></li>
-				</ul>
+				<div class="container">
+					<ul>
+						<li><a href="{{pathFor 'create.circle'}}">Create</a></li>
+						<li><a href="{{pathFor 'circles.index'}}">Circle</a></li>
+						<li><a href="{{pathFor 'circles.map'}}">Map</a></li>
+						<li><a href="{{pathFor 'profile'}}">Profile</a></li>
+						<li id="logout"><a href="/">Logout</a></li>
+					</ul>
+				</div>
 			</div>
 
 		{{else}}
-			<div class="container">
-
+			<div class="menu {{navflag}}">
+				<a href="#" class="pull-left">
+					<i class="fa fa-times fa-4x"></i>
+				</a>
+				<div class="clearfix"></div>
+				<div class="container">
+					<ul>
+						<li><a href="/">Home</a></li>
+						<li><a href="{{pathFor 'about'}}">About</a></li>
+						<li><a href="{{pathFor 'contact'}}">Contact</a></li>
+					</ul>
+				</div>
 			</div>
 		{{/if}}
 	</nav>

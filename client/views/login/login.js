@@ -20,6 +20,8 @@ Template.Login.events({
         }
       }
     );
+
+    Router.go("circles.map");
   }
 });
 

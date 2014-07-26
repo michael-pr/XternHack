@@ -15,7 +15,10 @@ Router.map(function () {
       this.route('home', {path: '/'});
   */
   this.route('login', {path: '/'});
-  this.route('register', {path: '/register'})
+  this.route('about', {path: '/about'});
+  this.route('contact', {path: '/contact'});
+
+  this.route('register', {path: '/register'});
   this.route('circles.index', {path: '/circle/:id'});
   this.route('create.circle', {path: '/circles/create'});
   this.route('circles.map', {path: '/map'});
