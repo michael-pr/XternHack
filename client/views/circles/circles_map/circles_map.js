@@ -33,10 +33,21 @@ Template.CirclesMap.rendered = function () {
         center: new google.maps.LatLng(41.875696,-87.624207)
     };
     map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions); 
-    var georssLayer = new google.maps.KmlLayer({
-      url: 'http://api.flickr.com/services/feeds/geo/?g=322338@N20&lang=en-us&format=feed-georss'
-    });
-    georssLayer.setMap(map);
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(function(pos){
+        var params = $.param({longitude:pos.coords.longitude,
+                              latitude:pos.coords.latitude});
+        var url = 'http://circleboard.meteor.com' + Router.path('kmltest') + '?' + params;
+        console.log(url);
+        var georssLayer = new google.maps.KmlLayer({
+          url: url
+        });
+        georssLayer.setMap(map);
+      });
+    }
+    // $.get(Router.path('kmltest'), function(res){
+    //   alert(res);
+    // });
   });
 };
 
