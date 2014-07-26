@@ -38,3 +38,9 @@ article {
 	background-color: white;
 	padding: 20px;
 }
+article #menu {
+	height: 15%;
+}
+article #content {
+	height: 85%;
+}
