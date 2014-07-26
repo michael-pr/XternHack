@@ -34,7 +34,8 @@ Circles = new Meteor.Collection('circles', {
 		},
 		password: {
 			type: String,
-			label: "Password"
+			label: "Password",
+			optional: true
 		},
 		userId: {
 			type: String

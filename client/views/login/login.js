@@ -9,6 +9,20 @@ Template.Login.events({
    *
    *  }
    */
+   "submit #login-form": function(event, template) {
+    event.preventDefault();
+    Meteor.loginWithPassword(
+      template.find("[name='email-login']").value,
+      template.find("[name='password-login']").value,
+      function(error) {
+        if (error) {
+          alert("There was an error logging in.")
+        }
+      }
+    );
+
+    Router.go("circles.map");
+  }
 });
 
 Template.Login.helpers({

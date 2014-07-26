@@ -6,7 +6,7 @@ function switchNavFlag(){
   (Session.get("navflag") == true) ? Session.set("navflag", false) : Session.set("navflag", true);
 }
 function showHideNav(){
-  var viewportWidth = $(window).width() * 0.7;
+  var viewportWidth = $(window).width() * 0.4;
   $('article').animate({'left':(Session.get("navflag")) ? '0' : viewportWidth}, 150)
 }
 Template.MasterLayout.events({
@@ -23,6 +23,9 @@ Template.MasterLayout.events({
    'click a': function (e, tmpl) {
     switchNavFlag();
     showHideNav();
+   },
+   'click #logout': function (e, tmpl) {
+    Meteor.logout();
    }
 });
 
