@@ -1,3 +1,14 @@
 <template name="CreateCircle">
-	<h1>Create a circle</h1>
+	{{#if currentUser}}
+	<form class="create-circle-form">
+		<input type="text" name="title" placeholder="title" />
+		<input type="text" name="description" placeholder="description (optional)" />
+		<input type="checkbox" name="private" value="private?">
+		<div class="{{isPrivate}}">
+			<input type="password" name="password" placeholder="password" />
+		</div>
+	</form>
+	{{else}}
+		<h1>You must be logged in lol.</h1>
+	{{/if}}
 </template>

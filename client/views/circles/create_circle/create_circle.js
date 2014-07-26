@@ -18,6 +18,13 @@ Template.CreateCircle.helpers({
    *    return Items.find();
    *  }
    */
+
+   isPrivate: function () {
+    console.log($("input[name='private']"));
+    return false; 
+    //return $("#privateCheckbox").prop("checked") ? "" : "hidden";
+   }
+
 });
 
 /*****************************************************************************/
