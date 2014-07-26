@@ -14,13 +14,13 @@
 					<li><a href="{{pathFor 'circles.index'}}">Circle</a></li>
 					<li><a href="{{pathFor 'circles.map'}}">Map</a></li>
 					<li><a href="{{pathFor 'profile'}}">Profile</a></li>
-					<li>{{> loginButtons}}</li>
+					<li id="logout"><a href="/">Logout</a></li>
 				</ul>
 			</div>
 
 		{{else}}
 			<div class="container">
-				{{>loginButtons}}
+
 			</div>
 		{{/if}}
 	</nav>

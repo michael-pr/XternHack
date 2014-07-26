@@ -23,6 +23,9 @@ Template.MasterLayout.events({
    'click a': function (e, tmpl) {
     switchNavFlag();
     showHideNav();
+   },
+   'click #logout': function (e, tmpl) {
+    Meteor.logout();
    }
 });
 
