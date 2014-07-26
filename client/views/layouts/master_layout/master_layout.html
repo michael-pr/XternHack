@@ -1,10 +1,14 @@
 <template name="MasterLayout">
 	<nav>
-		<div id="menu">
-			Menu
-		</div>
 		{{#if currentUser}}
 			<div class="menu {{navflag}}">
+				<a href="#" class="pull-left">
+					<i class="fa fa-times fa-4x"></i>
+				</a>
+				<a href="{{pathFor 'create.circle'}}" class="pull-right">
+					<i class="fa fa-plus-circle fa-4x"></i>
+				</a>
+				<div class="clearfix"></div>
 				<ul>
 					<li><a href="{{pathFor 'create.circle'}}">Create</a></li>
 					<li><a href="{{pathFor 'circles.index'}}">Circle</a></li>
@@ -13,6 +17,7 @@
 					<li>{{> loginButtons}}</li>
 				</ul>
 			</div>
+
 		{{else}}
 			<div class="container">
 				{{>loginButtons}}
@@ -20,6 +25,9 @@
 		{{/if}}
 	</nav>
 	<article>
+		<div id="menu">
+			<i class="fa fa-bars fa-4x"></i>
+		</div>
 		{{> yield}}
 	</article>
 </template>
