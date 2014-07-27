@@ -18,3 +18,7 @@ Meteor.publish("circles_post", function (postId) {
 Meteor.publish("posts_replies", function (postId) {
 	return Replies.find({postId: postId});
 });
+
+Meteor.publish("circles_all", function () {
+	return Circles.find({});
+});
