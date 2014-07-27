@@ -16,6 +16,9 @@ Posts = new Meteor.Collection('posts', {
 		},
 		downVote: {
 			type: Number
+		},
+		createdate: {
+			type: Date
 		}
 	}
 });

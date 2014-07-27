@@ -1,0 +1,29 @@
+/*****************************************************************************/
+/* CirclesPosts: Style */
+/*****************************************************************************/
+
+.circle-post {
+	margin: 20px 20px 0 20px;
+	background-color: #BDC3C7;
+}
+
+.circle-post-wrapper {
+	padding: 10px;
+	width: 100%;
+	height: 100%;
+}
+
+.circle-post-comments {
+	float: right;
+}
+
+.circle-post-content {
+	width: 82%;
+	float: left;
+	margin: 0 0 0 6px;
+}
+
+.circle-post-vote {
+	width: 10%;
+	float: left;
+}

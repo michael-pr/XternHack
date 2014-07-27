@@ -34,15 +34,23 @@
 	width: 50%;
 	text-align: center;
 	float: left;
-	padding-top: 20px
+	padding-top: 10px
 }
+	.circle-options-new a {
+		width: 100%;
+		height: 100%;
+	}
 
 .circle-options-hot {
 	width: 50%;
 	text-align: center;
 	float: left;
-	padding-top: 20px;
+	padding-top: 10px;
 }
+	.circle-options-hot a {
+		width: 100%;
+		height: 100%;
+	}
 
 .circle-options-post {
 	border-radius: 50%;
@@ -60,30 +68,4 @@
 
 .circle-posts {
 	margin-top: 40px;
-}
-
-.circle-post {
-	margin: 20px 20px 0 20px;
-	background-color: #BDC3C7;
-}
-
-.circle-post-wrapper {
-	padding: 10px;
-	width: 100%;
-	height: 100%;
-}
-
-.circle-post-comments {
-	float: right;
-}
-
-.circle-post-content {
-	width: 82%;
-	float: left;
-	margin: 0 0 0 6px;
-}
-
-.circle-post-vote {
-	width: 10%;
-	float: left;
 }

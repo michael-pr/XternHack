@@ -1,0 +1,17 @@
+<template name="CirclesPosts">
+	{{#each posts}}
+		<div class="circle-post">
+			<div class="circle-post-wrapper">
+				<div class="circle-post-vote">
+					{{vote}}
+				</div>
+				<div class="circle-post-content">
+					<p>{{message}}</p>
+				</div>
+				<div class="circle-post-comments">
+					3 comments
+				</div>
+			</div>
+		</div>
+	{{/each}}
+</template>

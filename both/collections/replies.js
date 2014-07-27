@@ -16,6 +16,9 @@ Replies = new Meteor.Collection('replies', {
 		},
 		downVote: {
 			type: Number
+		},
+		createdate: {
+			type: Date
 		}
 	}
 });
