@@ -8,29 +8,17 @@
 	</div>
 	<div class="circle-options">
 		<span class="circle-options-new">
-			<p>New</p>
+			<a class="waves-effect waves-button" href="#">New</a>
 		</span>
 		<div class="circle-options-post">
 			<i class="fa fa-plus fa-3x"></i>
 		</div>
 		<span class="circle-options-hot">
-			<p>Hot</p>
+			<a class="waves-effect waves-button" href="#">Hot</a>
 		</span>
 	</div>
 	<div class="circle-posts">
-		<div class="circle-post">
-			<div class="circle-post-wrapper">
-				<div class="circle-post-vote">
-					up/down
-				</div>
-				<div class="circle-post-content">
-					<p>This is a test post</p>
-				</div>
-				<div class="circle-post-comments">
-					3 comments
-				</div>
-			</div>
-		</div>
+		{{> CirclesPosts}}
 	</div>
 
 </template>

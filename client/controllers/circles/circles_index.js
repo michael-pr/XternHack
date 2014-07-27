@@ -5,6 +5,7 @@ CirclesIndexController = RouteController.extend({
 
   waitOn: function () {
   	var id = this.params._id;
+    Session.set("currentCircleId", id)
   	return [Meteor.subscribe("circles_index", this.params._id)];
   },
 
