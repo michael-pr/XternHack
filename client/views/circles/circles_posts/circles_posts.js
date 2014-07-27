@@ -25,6 +25,8 @@ Template.CirclesPosts.events({
       } else {
         selection.addClass('orange');
       }
+
+      voteUp(this._id);
    },
    'click .fa-chevron-down': function (e, tmpl) {
       // alert('def');
@@ -35,6 +37,8 @@ Template.CirclesPosts.events({
       } else {
         selection.addClass('blue');
       }
+
+      voteDown(this._id);
    }
 });
 
@@ -43,6 +47,14 @@ function goToPost (postId) {
   var path = Router.path("login");
   var finalPath = path + "post/" + postId;
   Router.go(finalPath);
+}
+
+function voteUp (postId) {
+  Posts.update(postId, {$inc: {upVote: 1}});
+}
+
+function voteDown (postId) {
+  Posts.update(postId, {$inc: {downVote: 1}});
 }
 
 Template.CirclesPosts.helpers({
