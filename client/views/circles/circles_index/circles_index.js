@@ -27,6 +27,18 @@ Template.CirclesIndex.events({
 
       var form = tmpl.find("form");
       form.reset();
+   },
+   "click .circle-options-post, .circle-options-post i": function(e, tmpl) {
+      e.preventDefault();
+      var tform = $('#theForm');
+      // console.log(tform);
+      // console.log(tform.hasClass('hidden'));
+      // console.log($('#theForm').hasClass('hidden'));
+      if(tform.hasClass('hidden')){
+        tform.removeClass('hidden');
+      } else {
+        tform.addClass('hidden');
+      }
    }
 });
 
