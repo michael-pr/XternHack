@@ -9,6 +9,24 @@ Template.PostDetails.events({
    *
    *  }
    */
+    "submit form": function (e, tmpl) {
+      e.preventDefault();
+
+      var message = tmpl.find("[name='message']").value;
+      var postId = Session.get("currentPostId");
+
+      Replies.insert({
+        postId: postId,
+        userId: Meteor.userId(),
+        message: message,
+        upVote: 0,
+        downVote: 0,
+        createdate: new Date
+      });
+
+      var form = tmpl.find("form");
+      form.reset();
+   }
 });
 
 Template.PostDetails.helpers({

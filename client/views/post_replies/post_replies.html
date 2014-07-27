@@ -1,6 +1,9 @@
 <template name="PostReplies">
-  <div>
-  	{{message}}
-  	{{upVote}}
-  </div>
+
+	{{#each replies}}
+		<div>
+			{{message}}
+			{{upVote}}
+		</div>	
+  	{{/each}}
 </template>

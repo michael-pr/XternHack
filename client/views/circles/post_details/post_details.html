@@ -8,5 +8,12 @@
 	<div>
 		{{> PostReplies}}
 	</div>
+	<div>
+		{{#autoForm collection="Replies" id="createReply" type="insert"}}
+			{{> afQuickField name="message"}}
+
+			<button type="submit" class="btn btn-primary btn-large">Post</button>
+		{{/autoForm}}
+	</div>
 
 </template>
