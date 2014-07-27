@@ -9,6 +9,13 @@ Template.CirclesNearby.events({
    *
    *  }
    */
+   'click .nearby-circles-item': function (e, tmpl) {
+      var circleId = this._id;
+      Session.set("currentCircleId", circleId);
+      var path = Router.path("login");
+      var finalPath = path + "circle/" + circleId;
+      Router.go(finalPath);
+   }
 });
 
 Template.CirclesNearby.helpers({

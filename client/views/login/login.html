@@ -1,16 +1,21 @@
 <template name="Login">
 	{{#if currentUser}}
 	{{else}}
-		<div class="container">
-			<form id="login-form" class="form-signin">
-				<h2 class="form-signin-heading">Log In</h2>
-				<input type="text" name="email-login" placeholder="email" class="form-control" />
-				<input type="password" name="password-login" placeholder="password" class="form-control" />
-				<button type="submit" class="btn btn-lg btn-primary btn-block">Log In</button>
-			</form>
-		</div>
-		<div class="container">
-			<a href="{{pathFor 'register'}}">create an account</a>
+		<div class="login-wrapper">
+			<div class="container">
+				<h1>MapChat</h1>
+			</div>
+			<div class="container">
+				<form id="login-form" class="form-signin">
+					<h2 class="form-signin-heading"></h2>
+					<input type="text" name="email-login" placeholder="email" class="form-control" />
+					<input type="password" name="password-login" placeholder="password" class="form-control" />
+					<button type="submit" class="btn btn-lg btn-primary btn-block">Log In</button>
+				</form>
+			</div>
+			<div class="container">
+				<a href="{{pathFor 'register'}}">create an account</a>
+			</div>
 		</div>
 	{{/if}}
 </template>

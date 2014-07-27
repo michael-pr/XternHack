@@ -1,3 +1,12 @@
 /*****************************************************************************/
 /* Circles/circlesNearby: Style */
 /*****************************************************************************/
+
+.nearby-circles-item {
+	padding: 2px 0 0 10px;
+}
+
+.nearby-circles-wrapper {
+	margin-top: 80px;
+	padding: 20px;
+}
