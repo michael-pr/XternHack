@@ -3,7 +3,8 @@
 /*****************************************************************************/
 
 Meteor.publish('circles_index', function (id) {
-  return Circles.find({_id: id});
+  // return different circle depending on if id was passed or not
+  return Circles.find( (id) ? {_id: id} : {} );
 });
 
 Meteor.publish("circles_posts", function (circleId) {
