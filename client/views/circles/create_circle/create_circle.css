@@ -5,3 +5,11 @@
 .hidden {
 	display: none;
 }
+
+.create-circle-container {
+	margin: 80px 20px 20px 20px;
+}
+
+	.create-circle-container legend {
+		color: #fff;
+	}

@@ -1,17 +1,19 @@
 <template name="CreateCircle">
-	{{#if currentUser}}
-		{{#autoForm collection="Circles" id="createCircleForm" type="insert"}}
-		<fieldset>
-			<legend>Create a Circle</legend>
-			{{> afQuickField name="title"}}
-			{{> afQuickField name="description"}}
-			{{> afQuickField name="radius"}}
-			{{> afQuickField name="anonymous" id="anonymous-checkbox"}}
-			{{> afQuickField name="password" id="password-field"}}
-		</fieldset>
-		<button type="submit" class="btn btn-primary btn-large btn-block">Create</button>
-		{{/autoForm}}
-	{{else}}
+	<div class="create-circle-container">
+		{{#if currentUser}}
+			{{#autoForm collection="Circles" id="createCircleForm" type="insert"}}
+			<fieldset>
+				<legend>Create a Circle</legend>
+				{{> afQuickField name="title"}}
+				{{> afQuickField name="description"}}
+				{{> afQuickField name="radius"}}
+				{{> afQuickField name="anonymous" id="anonymous-checkbox"}}
+				{{> afQuickField name="password" id="password-field"}}
+			</fieldset>
+			<button type="submit" class="btn btn-primary btn-large btn-block">Create</button>
+			{{/autoForm}}
+		{{else}}
 
-	{{/if}}
+		{{/if}}
+	</div>
 </template>
