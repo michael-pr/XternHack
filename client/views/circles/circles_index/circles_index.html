@@ -17,17 +17,17 @@
 				<a class="waves-effect waves-button" href="#">Hot</a>
 			</span>
 		</div>
-		<div class="circle-posts">
-			{{> CirclesPosts}}
-		</div>
-		<div class="circle-post-field">
+		<div id="theForm" class="circle-post-field hidden">
 			<div class="circle-post-field-content">
 				{{#autoForm collection="Posts" id="createPost" type="insert"}}
-					{{> afQuickField name="message"}}
-
+					{{> afQuickField name="message" rows=3}}
 					<button type="submit" class="btn btn-primary btn-large">Post</button>
 				{{/autoForm}}
+				<div class="clearfix"></div>
 			</div>
+		</div>
+		<div class="circle-posts">
+			{{> CirclesPosts}}
 		</div>
 	{{else}}
 	

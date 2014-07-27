@@ -15,6 +15,26 @@ Template.CirclesPosts.events({
    'click .circle-post-comments': function (e, tmpl) {
       var postId = this._id;
       goToPost(postId);
+   },
+   'click .fa-chevron-up': function (e, tmpl) {
+      // alert('abc');
+      // console.log(tmpl);
+      var selection = $('.fa-chevron-up');
+      if(selection.hasClass('orange')) {
+        selection.removeClass('orange');
+      } else {
+        selection.addClass('orange');
+      }
+   },
+   'click .fa-chevron-down': function (e, tmpl) {
+      // alert('def');
+      // console.log(tmpl);
+      var selection = $('.fa-chevron-down');
+      if(selection.hasClass('blue')) {
+        selection.removeClass('blue');
+      } else {
+        selection.addClass('blue');
+      }
    }
 });
 

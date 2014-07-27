@@ -51,7 +51,9 @@ Template.MasterLayout.created = function () {
 };
 
 Template.MasterLayout.rendered = function () {
-  switchNavFlag();
+  if(!Session.get("navflag")){
+    switchNavFlag();
+  }
 };
 
 Template.MasterLayout.destroyed = function () {

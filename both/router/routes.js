@@ -18,7 +18,6 @@ Router.map(function () {
   this.route('about', {path: '/about'});
   this.route('contact', {path: '/contact'});
 
-  this.route('circles.nearby', {path: '/circles/nearby'});
   this.route('register', {path: '/register'});
   this.route('circles.index', {path: '/circle/:_id'});
   this.route('create.circle', {path: '/circles/create'});
