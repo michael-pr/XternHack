@@ -1,8 +1,8 @@
 
 /*****************************************************************************/
-/* PostDetails: Event Handlers and Helpersss .js*/
+/* PostReplies: Event Handlers and Helpersss .js*/
 /*****************************************************************************/
-Template.PostDetails.events({
+Template.PostReplies.events({
   /*
    * Example:
    *  'click .selector': function (e, tmpl) {
@@ -11,30 +11,31 @@ Template.PostDetails.events({
    */
 });
 
-Template.PostDetails.helpers({
+Template.PostReplies.helpers({
   /*
    * Example:
    *  items: function () {
    *    return Items.find();
    *  }
    */
-   post: function () {
+   replies: function () {
     var postId = Session.get("currentPostId");
-    return Posts.findOne({_id: postId});
+    return Replies.find({postId: postId});
    }
 });
 
 /*****************************************************************************/
-/* PostDetails: Lifecycle Hooks */
+/* PostReplies: Lifecycle Hooks */
 /*****************************************************************************/
-Template.PostDetails.created = function () {
-  Meteor.subscribe("circles_post", Session.get("currentPostId"));
+Template.PostReplies.created = function () {
+  Meteor.subscribe('posts_replies', Session.get("currentPostId"));
+  console.log(Session.get("currentPostId"));
 };
 
-Template.PostDetails.rendered = function () {
+Template.PostReplies.rendered = function () {
 };
 
-Template.PostDetails.destroyed = function () {
+Template.PostReplies.destroyed = function () {
 };
 
 

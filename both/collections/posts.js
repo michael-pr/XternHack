@@ -11,6 +11,9 @@ Posts = new Meteor.Collection('posts', {
 			min: 0,
 			max: 140
 		},
+		numComments: {
+			type: Number
+		},
 		upVote: {
 			type: Number
 		},

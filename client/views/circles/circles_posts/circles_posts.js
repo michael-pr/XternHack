@@ -8,7 +8,22 @@ Template.CirclesPosts.events({
    *
    *  }
    */
+   'click .circle-post-content': function (e, tmpl) {
+      var postId = this._id;
+      goToPost(postId);
+    },
+   'click .circle-post-comments': function (e, tmpl) {
+      var postId = this._id;
+      goToPost(postId);
+   }
 });
+
+function goToPost (postId) {
+  Session.set("currentPostId", postId);
+  var path = Router.path("login");
+  var finalPath = path + "post/" + postId;
+  Router.go(finalPath);
+}
 
 Template.CirclesPosts.helpers({
   /*

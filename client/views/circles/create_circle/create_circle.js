@@ -62,6 +62,12 @@ Template.CreateCircle.helpers({
 
    isPrivate: function () {
     return Session.get("isPrivate") ? "" : "hidden"; 
+   },
+   longitude: function () {
+    return Session.get("longitude");
+   },
+   latitude: function () {
+    return Session.get("latitude");
    }
 
 });

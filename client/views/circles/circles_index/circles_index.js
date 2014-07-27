@@ -9,6 +9,25 @@ Template.CirclesIndex.events({
    *
    *  }
    */
+   "submit form": function (e, tmpl) {
+      e.preventDefault();
+
+      var message = tmpl.find("[name='message']").value;
+      var circleId = Session.get("currentCircleId");
+
+      Posts.insert({
+        circleId: circleId,
+        userId: Meteor.userId(),
+        message: message,
+        upVote: 0,
+        downVote: 0,
+        createdate: new Date,
+        numComments: 0
+      });
+
+      var form = tmpl.find("form");
+      form.reset();
+   }
 });
 
 Template.CirclesIndex.helpers({
@@ -18,6 +37,7 @@ Template.CirclesIndex.helpers({
    *    return Items.find();
    *  }
    */
+
 });
 
 /*****************************************************************************/

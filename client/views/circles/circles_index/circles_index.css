@@ -69,3 +69,21 @@
 .circle-posts {
 	margin-top: 40px;
 }
+
+
+
+
+
+.circle-post-field {
+	
+}
+
+	.circle-post-field button {
+		width: 10%;
+		float: left;
+	}
+
+.circle-post-field-content {
+	width: 80%;
+	float: left;
+}

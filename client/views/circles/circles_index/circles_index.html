@@ -1,24 +1,35 @@
 <template name="CirclesIndex">
-
-	<div class="circle-cover">
-		<div class="circle-title">
-			<h1>{{title}}</h1>
-			<p>{{description}}</p>
-		</div>	
-	</div>
-	<div class="circle-options">
-		<span class="circle-options-new">
-			<a class="waves-effect waves-button" href="#">New</a>
-		</span>
-		<div class="circle-options-post">
-			<i class="fa fa-plus fa-3x"></i>
+	{{#if currentUser}}
+		<div class="circle-cover">
+			<div class="circle-title">
+				<h1>{{title}}</h1>
+				<p>{{description}}</p>
+			</div>	
 		</div>
-		<span class="circle-options-hot">
-			<a class="waves-effect waves-button" href="#">Hot</a>
-		</span>
-	</div>
-	<div class="circle-posts">
-		{{> CirclesPosts}}
-	</div>
+		<div class="circle-options">
+			<span class="circle-options-new">
+				<a class="waves-effect waves-button" href="#">New</a>
+			</span>
+			<div class="circle-options-post">
+				<i class="fa fa-plus fa-3x"></i>
+			</div>
+			<span class="circle-options-hot">
+				<a class="waves-effect waves-button" href="#">Hot</a>
+			</span>
+		</div>
+		<div class="circle-posts">
+			{{> CirclesPosts}}
+		</div>
+		<div class="circle-post-field">
+			<div class="circle-post-field-content">
+				{{#autoForm collection="Posts" id="createPost" type="insert"}}
+					{{> afQuickField name="message"}}
 
+					<button type="submit" class="btn btn-primary btn-large">Post</button>
+				{{/autoForm}}
+			</div>
+		</div>
+	{{else}}
+	
+	{{/if}}
 </template>

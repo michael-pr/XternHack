@@ -1,40 +1,38 @@
 
 /*****************************************************************************/
-/* PostDetails: Event Handlers and Helpersss .js*/
+/* Circles/circlesNearby: Event Handlers and Helpersss .js*/
 /*****************************************************************************/
-Template.PostDetails.events({
+Template.CirclesNearby.events({
   /*
    * Example:
    *  'click .selector': function (e, tmpl) {
    *
    *  }
    */
+   'click .circle-options-post': function (e, tmpl) {
+
+   }
 });
 
-Template.PostDetails.helpers({
+Template.CirclesNearby.helpers({
   /*
    * Example:
    *  items: function () {
    *    return Items.find();
    *  }
    */
-   post: function () {
-    var postId = Session.get("currentPostId");
-    return Posts.findOne({_id: postId});
-   }
 });
 
 /*****************************************************************************/
-/* PostDetails: Lifecycle Hooks */
+/* Circles/circlesNearby: Lifecycle Hooks */
 /*****************************************************************************/
-Template.PostDetails.created = function () {
-  Meteor.subscribe("circles_post", Session.get("currentPostId"));
+Template.CirclesNearby.created = function () {
 };
 
-Template.PostDetails.rendered = function () {
+Template.CirclesNearby.rendered = function () {
 };
 
-Template.PostDetails.destroyed = function () {
+Template.CirclesNearby.destroyed = function () {
 };
 
 

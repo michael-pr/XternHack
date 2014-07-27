@@ -4,6 +4,7 @@
 			{{#autoForm collection="Circles" id="createCircleForm" type="insert"}}
 			<fieldset>
 				<legend>Create a Circle</legend>
+				<p>Your location ({{latitude}}, {{longitude}}}</p>
 				{{> afQuickField name="title"}}
 				{{> afQuickField name="description"}}
 				{{> afQuickField name="radius"}}

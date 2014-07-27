@@ -1,3 +1,12 @@
 <template name="PostDetails">
-  client/views/circles/post_details/post_details.html
+
+	<div class="post-details-wrapper">
+		<div class="post-details-content">
+			<h1>{{post.message}}</h1>
+		</div>
+	</div>
+	<div>
+		{{> PostReplies}}
+	</div>
+
 </template>
