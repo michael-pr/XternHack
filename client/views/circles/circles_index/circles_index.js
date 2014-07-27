@@ -39,6 +39,12 @@ Template.CirclesIndex.events({
       } else {
         tform.addClass('hidden');
       }
+   },
+   'click .circle-options-new': function (e, tmpl) {
+      Session.set("newhot", "new");
+   },
+   'click .circle-options-hot': function (e, tmpl) {
+      Session.set("newhot", "hot");
    }
 });
 

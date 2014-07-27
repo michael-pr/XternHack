@@ -72,7 +72,22 @@ Template.CirclesPosts.helpers({
    */
 
    posts: function () {
-    return Posts.find({circleId: Session.get("currentCircleId")});
+    var circleId = Session.get("currentCircleId");
+    var newhot = Session.get("newhot");
+
+    if (newhot == "hot") {
+      return Posts.find({circleId: circleId}, {
+        sort: {
+          upVote: -1
+        }
+      })
+    } else {
+      return Posts.find({circleId: circleId}, {
+        sort: {
+          createdate: -1
+        }
+      });
+    }
    },
    vote: function () {
     var vote = this.upVote - this.downVote;
@@ -90,6 +105,8 @@ Template.CirclesPosts.created = function () {
 };
 
 Template.CirclesPosts.rendered = function () {
+
+  Session.set("newhot", "new");
 
 };
 
