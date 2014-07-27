@@ -10,11 +10,11 @@ function goToPost (postId) {
 }
 
 function voteUp (postId) {
-  Posts.update(postId, {$inc: {upVote: 1}});
+  Replies.update(postId, {$inc: {upVote: 1}});
 }
 
 function voteDown (postId) {
-  Posts.update(postId, {$inc: {downVote: 1}});
+  Replies.update(postId, {$inc: {downVote: 1}});
 }
 
 Template.PostReplies.events({
