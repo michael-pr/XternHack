@@ -66,6 +66,10 @@ Template.PostReplies.helpers({
    replies: function () {
     var postId = Session.get("currentPostId");
     return Replies.find({postId: postId});
+   },
+   vote: function () {
+    var vote = this.upVote - this.downVote;
+    return vote;
    }
 });
 
