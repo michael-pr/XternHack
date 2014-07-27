@@ -17,28 +17,34 @@ Template.CirclesPosts.events({
       goToPost(postId);
    },
    'click .fa-chevron-up': function (e, tmpl) {
-      // alert('abc');
-      // console.log(tmpl);
-      var selection = $('.fa-chevron-up');
+      e.preventDefault();
+      var selection = $(e.target);
       if(selection.hasClass('orange')) {
         selection.removeClass('orange');
+        voteDown(this._id);
       } else {
+        voteUp(this._id);
         selection.addClass('orange');
+        var otherVote = $(selection.parent().children('.fa-chevron-down')[0]);
+        if(otherVote.hasClass('blue')){
+          otherVote.removeClass('blue');
+        }
       }
-
-      voteUp(this._id);
    },
    'click .fa-chevron-down': function (e, tmpl) {
-      // alert('def');
-      // console.log(tmpl);
-      var selection = $('.fa-chevron-down');
+      e.preventDefault();
+      var selection = $(e.target);
       if(selection.hasClass('blue')) {
         selection.removeClass('blue');
+        voteUp(this._id);
       } else {
+        voteDown(this._id);
         selection.addClass('blue');
+        var otherVote = $(selection.parent().children('.fa-chevron-up')[0]);
+        if(otherVote.hasClass('orange')){
+          otherVote.removeClass('orange');
+        }
       }
-
-      voteDown(this._id);
    }
 });
 
