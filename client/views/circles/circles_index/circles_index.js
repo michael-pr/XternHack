@@ -28,7 +28,7 @@ Template.CirclesIndex.events({
       var form = tmpl.find("form");
       form.reset();
    },
-   "click .circle-options-post, .circle-options-post i": function(e, tmpl) {
+   "click .circle-options-post": function(e, tmpl) {
       e.preventDefault();
       var tform = $('#theForm');
       // console.log(tform);
