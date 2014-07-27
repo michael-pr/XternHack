@@ -24,6 +24,8 @@ Template.PostDetails.events({
         createdate: new Date
       });
 
+      Posts.update(postId, {$inc: {numComments: 1}});
+
       var form = tmpl.find("form");
       form.reset();
    }
