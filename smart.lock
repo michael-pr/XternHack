@@ -6,7 +6,8 @@
       "bootstrap-3": {},
       "googlemaps": {},
       "font-awesome": {},
-      "autoform": {}
+      "autoform": {},
+      "Waves": {}
     },
     "packages": {
       "iron-router": {
@@ -33,6 +34,11 @@
         "git": "https://github.com/aldeed/meteor-autoform.git",
         "tag": "v0.16.0",
         "commit": "c53ee673cfbb0aa5388e54b3ad931367fcbc9f41"
+      },
+      "Waves": {
+        "git": "https://github.com/ISNIT0/meteor-waves.git",
+        "tag": "v0.1.0",
+        "commit": "2477eb347c1d42255607530f3a3b359ce9ded408"
       },
       "blaze-layout": {
         "git": "https://github.com/EventedMind/blaze-layout.git",

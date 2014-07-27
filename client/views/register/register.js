@@ -17,7 +17,7 @@ Template.Register.events({
       password: template.find("[name='password-login']").value
     });
 
-    if (Meteor.user())
+    if (!Meteor.user())
       Router.go("circles.map");
     else
       Router.go("login");

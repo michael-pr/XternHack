@@ -19,7 +19,7 @@ Router.map(function () {
   this.route('contact', {path: '/contact'});
 
   this.route('register', {path: '/register'});
-  this.route('circles.index', {path: '/circle'});
+  this.route('circles.index', {path: '/circle/:_id'});
   this.route('create.circle', {path: '/circles/create'});
   this.route('circles.map', {path: '/map'});
   this.route('post.details', {path: '/post/:id'});

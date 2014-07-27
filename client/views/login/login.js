@@ -21,7 +21,7 @@ Template.Login.events({
       }
     );
 
-    if (Meteor.user())
+    if (!Meteor.user())
       Router.go("circles.map");
     else
       Router.go("login");

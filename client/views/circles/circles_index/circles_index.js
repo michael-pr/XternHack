@@ -18,9 +18,6 @@ Template.CirclesIndex.helpers({
    *    return Items.find();
    *  }
    */
-   circles: function() {
-    return Circles.find({});
-   }
 });
 
 /*****************************************************************************/
